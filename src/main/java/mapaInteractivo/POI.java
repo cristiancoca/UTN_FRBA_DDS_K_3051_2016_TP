@@ -36,4 +36,17 @@ public class POI {
 		this.tipo = tipo;
 	}
 	/*****Getters y Setters*****/
+	
+	/*****Metodos*****/
+	public boolean esValido() {
+		return !this.getNombre().isEmpty() && this.getGeolocalizacion() != null;
+	}
+	
+	public boolean distanciaConPOIMenorQue(POI unPOI, int unaDistancia) {
+		return this.distanciaConPOI(unPOI) == unaDistancia;
+	}
+	
+	public double distanciaConPOI(POI unPOI) {
+		return this.getGeolocalizacion().distanciaConGeolocalizacion(unPOI.getGeolocalizacion());
+	}
 }
