@@ -21,4 +21,10 @@ public class Rubro {
 		this.radioCercania = radioCercania;
 	}
 	/*****Getters y Setters*****/
+	
+	/*****Metodos*****/
+	public boolean estaCercaDe(Geolocalizacion unaGeolocalizacion) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
