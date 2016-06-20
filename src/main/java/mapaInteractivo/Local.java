@@ -30,8 +30,8 @@ public class Local extends TipoPOI {
 	/*****Getters y Setters*****/
 	
 	/*****Metodos*****/
-	public boolean estaCercaDe(Geolocalizacion unaGeolocalizacion) {
-		return this.getRubro().estaCercaDe(unaGeolocalizacion);
+	public boolean estaCercaDe(Geolocalizacion unaGeolocalizacion, Geolocalizacion miUbicacion) {
+		return this.getRubro().estaCercaDe(unaGeolocalizacion, miUbicacion);
 	}
 	
 

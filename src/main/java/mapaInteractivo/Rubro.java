@@ -4,7 +4,7 @@ public class Rubro {
 
 	/*****Atributos*****/
 	private String nombre;
-	private String radioCercania;
+	private double radioCercania;
 	/*****Atributos*****/
 	
 	/*****Getters y Setters*****/
@@ -14,17 +14,16 @@ public class Rubro {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getRadioCercania() {
+	public double getRadioCercania() {
 		return radioCercania;
 	}
-	public void setRadioCercania(String radioCercania) {
+	public void setRadioCercania(double radioCercania) {
 		this.radioCercania = radioCercania;
 	}
 	/*****Getters y Setters*****/
 	
 	/*****Metodos*****/
-	public boolean estaCercaDe(Geolocalizacion unaGeolocalizacion) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean estaCercaDe(Geolocalizacion unaGeolocalizacion, Geolocalizacion miUbicacion) {
+		return Double.compare(miUbicacion.distanciaConGeolocalizacion(unaGeolocalizacion), this.getRadioCercania() * 100) == 0;
 	}
 }
