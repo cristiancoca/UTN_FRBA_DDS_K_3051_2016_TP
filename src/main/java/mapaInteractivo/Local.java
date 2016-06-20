@@ -53,4 +53,8 @@ public class Local extends TipoPOI {
 	    
 	    return horariosDeHoy.stream().anyMatch(each -> each.incluyeHorario(horaFormateada));
 	}
+	
+	boolean tieneRubroConNombre(String rubro) {
+		return this.getRubro().getNombre() == rubro;
+	}
 }
